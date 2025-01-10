@@ -1,10 +1,88 @@
 * {
-  :root {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: gray;
-    color: black;
-    font-family: monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: gray;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: black;
+  font-family: monospace;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  height: calc(100vh - 15vh);
+  display: flex;
+  flex-direction: column;
+
+}
+
+nav {
+  height: 8vh;
+  color: black;
+  background-color: rgb(6, 104, 27);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1vh 2vh;
+}
+
+footer {
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  background-color: rgb(6, 104, 27);
+
+  /*  position: fixed;
+  bottom: 0;
+  width: 100%; */
+}
+
+/*IDs*/
+
+#nav-menu-container {
+  display: flex;
+  column-gap: 10px;
+  background-color: rgb(6, 104, 27);
+
+}
+
+#burger-menu-icon {
+  background-color: transparent;
+  height: 100%;
+}
+
+/*Classes*/
+.internal-link {
+  background-color: rgb(6, 104, 27);
+}
+
+@media only screen and (min-width:20em) {
+
+  main {
+    height: calc(100svh - 15svh);
+    padding: 1vh 1.5vh;
   }
+
+  /*IDs*/
+  #nav-menu-container {
+    font-size: 1.2rem;
+  }
+
+
 }
