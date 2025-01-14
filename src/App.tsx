@@ -3,6 +3,12 @@ import './App.css'
 import Home from './pages/Home'
 import Layout from './components/Layout'
 import About from './pages/About'
+import PickAndChoose from './pages/PickAndChoose'
+import Error404 from './pages/Error404'
+import Signup from './pages/signup' //cant find the path with capital letters apparently... Signup
+import Login from './pages/login'
+import Anonymus from './components/Anonymus'
+import Protected from './components/Protected'
 //import { IUser } from './types'
 
 export default function App() {
@@ -12,6 +18,12 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout><Home /></Layout>} />
         <Route path='/about' element={<Layout><About /></Layout>} />
+        <Route path='/notFound' element={<Layout><Error404 /></Layout>} />
+
+        <Route path='/signup' element={<Anonymus><Layout><Signup /></Layout></Anonymus>} />
+        <Route path='/login' element={<Anonymus><Layout><Login /></Layout></Anonymus>} />
+
+        <Route path='/pickAndChoose' element={<Protected><Layout><PickAndChoose /></Layout></Protected>} />
       </Routes>
 
     </>
