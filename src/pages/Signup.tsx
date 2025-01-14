@@ -1,6 +1,7 @@
 //import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import AuthForm from '../components/AuthForm';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -28,36 +29,9 @@ const Signup = () => {
     }
 
     return (
-        <div className='form-container'>
-            <h2>Sign Up</h2>
-            <form id='user-sign-up' onSubmit={submitUserData}>
-                <label htmlFor='email'>Email: </label>
-                <input
-                    className='input-field'
-                    type='email'
-                    name='email'
-                    placeholder='enter email'
-                    required
-                ></input>
-
-                <label htmlFor='password'>Password: </label>
-                <input
-                    className='input-field'
-                    type='text'
-                    name='password'
-                    placeholder="enter password"
-                    required
-                ></input>
-
-                <input
-                    className="button"
-                    type="submit"
-                    value="Submit"
-                ></input>
-
-            </form>
-
-        </div>
+        <>
+            <AuthForm submitUserData={submitUserData}></AuthForm>
+        </>
     )
 }
 

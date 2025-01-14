@@ -3,13 +3,12 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 import { AuthContextType } from '../types';
+import AuthForm from '../components/AuthForm';
 
 const login = () => {
-
     const navigate = useNavigate();
     const apiUrl = import.meta.env.VITE_API_URL;
     const { storeToken, authenticateUser } = useContext<AuthContextType | undefined>(AuthContext);
-
 
     const submitLogInData = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -34,36 +33,10 @@ const login = () => {
             .catch(err => console.log('error login in', err.response.data.message))
     }
 
-    return (<div className='form-container'>
-        <h2>Log In</h2>
-        <form id='user-log-in' onSubmit={submitLogInData}>
-            <label htmlFor='email'></label>
-            <input
-                className='input-field'
-                type='email'
-                name='email'
-                placeholder='enter email'
-                required
-            ></input>
-
-            <label htmlFor='password'></label>
-            <input
-                className='input-field'
-                type='text'
-                name='password'
-                placeholder="enter password"
-                required
-            ></input>
-
-            <input
-                className="button"
-                type="submit"
-                value="Submit"
-            ></input>
-
-        </form>
-
-    </div>
+    return (
+        <>
+            <AuthForm submitUserData={submitLogInData}></AuthForm>
+        </>
     )
 }
 

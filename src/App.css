@@ -73,6 +73,13 @@ footer {
   justify-content: space-evenly;
 }
 
+#search-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 /*Classes*/
 .internal-link {
   background-color: rgb(6, 104, 27);
