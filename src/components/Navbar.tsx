@@ -5,7 +5,7 @@ import { AuthContext } from '../contexts/AuthContext';
 import { AuthContextType } from '../types';
 
 function Navbar() {
-    const { isLoggedIn, user, logOutUser } = useContext<AuthContextType | undefined>(AuthContext);
+    const { isLoggedIn, logOutUser } = useContext<AuthContextType | undefined>(AuthContext);
 
     return (
         <nav>
