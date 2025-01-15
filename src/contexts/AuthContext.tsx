@@ -21,6 +21,7 @@ function AuthProviderWrapper(props: { children: React.ReactNode }) {
             axios.get(`${apiUrl}/auth/verify`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 .then((res) => {
                     const user = res.data;
+
                     setIsLoggedIn(true);
                     setIsLoading(false);
                     setUser(user);

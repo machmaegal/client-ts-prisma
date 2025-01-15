@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import AuthForm from '../components/AuthForm';
 
 const Signup = () => {
-    const navigate = useNavigate();
     const apiUrl = import.meta.env.VITE_API_URL;
+    const navigate = useNavigate();
 
     const submitUserData = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()

@@ -11,7 +11,8 @@ const AuthForm = ({ submitUserData }) => {
                     name='email'
                     placeholder='enter email'
                     required
-                ></input>
+                >
+                </input>
 
                 <label htmlFor='password'></label>
                 <input
@@ -20,13 +21,15 @@ const AuthForm = ({ submitUserData }) => {
                     name='password'
                     placeholder="enter password"
                     required
-                ></input>
+                >
+                </input>
 
                 <input
                     className="button"
                     type="submit"
                     value="Submit"
-                ></input>
+                >
+                </input>
 
             </form>
 

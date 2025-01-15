@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const SearchBar = () => {
+const SearchBar = ({ setResults }) => {
     const [searchTerm, setSearchTerm] = useState('')
     const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -9,13 +9,13 @@ const SearchBar = () => {
         try {
             const storedToken = localStorage.getItem("authToken");
             const response = await axios.get(`${apiUrl}/ingredients`, { headers: { Authorization: `Bearer ${storedToken}` } });
-            const results = response.data.filter((ingredient: { name: string }) => {
+            const searchResults = response.data.filter((ingredient: { name: string }) => {
                 return value &&
                     ingredient &&
                     ingredient.name &&
                     ingredient.name.toLowerCase().includes(value.toLowerCase());
             });
-            console.log(results);
+            setResults(searchResults)
         } catch (error) {
             console.error('Error fetching ingredients:', error);
         }
@@ -25,12 +25,17 @@ const SearchBar = () => {
         setSearchTerm(value)
         getIngredients(value)
     }
+
     return (
         <div>
+            <label htmlFor='search-bar'>Search: </label>
             <input
+                name='search-bar'
                 value={searchTerm}
                 placeholder='search sth'
-                onChange={(e) => handleChange(e.target.value)}></input>
+                onChange={(e) => handleChange(e.target.value)}
+            >
+            </input>
         </div>
     )
 }

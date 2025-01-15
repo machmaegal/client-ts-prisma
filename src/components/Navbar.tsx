@@ -14,6 +14,7 @@ function Navbar() {
                 {isLoggedIn && (<>
                     <Link to='/pickAndChoose' className='internal-link' >PickNChoose</Link>
                     <button onClick={logOutUser}>Logout</button>
+                    <Link to='/recipes' className='internal-link' >Recipes</Link>
                 </>)}
             </div>
 
