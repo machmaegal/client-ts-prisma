@@ -10,7 +10,6 @@ import Login from './pages/Login'
 import Anonymus from './components/Anonymus'
 import Protected from './components/Protected'
 import RecipeList from './components/RecipeList'
-import { APIURL } from './config/apiUrl.config'
 
 export default function App() {
   return (
