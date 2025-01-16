@@ -52,6 +52,7 @@ const RecipeList = () => {
 
     return (
         <div className='flex-column-container scrollable-container list-container'>
+            <h2>Your Collection</h2>
             {loading ? <div>Loading...</div> :
                 recipes.map((recipe, index) => (
                     <div key={index} className="recipe-card">
