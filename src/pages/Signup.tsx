@@ -1,6 +1,6 @@
 //import { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AuthForm from '../components/AuthForm';
 
 const Signup = () => {
@@ -30,7 +30,9 @@ const Signup = () => {
 
     return (
         <>
+            <h2>Sign Up</h2>
             <AuthForm submitUserData={submitUserData}></AuthForm>
+            <Link to='/login' >Go to LogIn </Link>
         </>
     )
 }

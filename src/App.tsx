@@ -10,6 +10,7 @@ import Login from './pages/Login'
 import Anonymus from './components/Anonymus'
 import Protected from './components/Protected'
 import RecipeList from './components/RecipeList'
+import Profile from './pages/Profile'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
 
         <Route path='/pickAndChoose' element={<Protected><Layout><PickAndChoose /></Layout></Protected>} />
         <Route path='/recipes' element={<Protected><Layout><RecipeList /></Layout></Protected>} />
+        <Route path='/profile' element={<Protected><Layout><Profile /></Layout></Protected>} />
       </Routes>
     </>
   )

@@ -15,6 +15,7 @@ function Navbar() {
                     <Link to='/pickAndChoose' className='internal-link' >PickNChoose</Link>
                     <button onClick={logOutUser}>Logout</button>
                     <Link to='/recipes' className='internal-link' >Recipes</Link>
+                    <Link to='/profile' className='internal-link' >Profile</Link>
                 </>)}
             </div>
 

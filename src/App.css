@@ -16,10 +16,10 @@ body {
 
 }
 
-a {
+/* a {
   text-decoration: none;
   color: black;
-}
+} */
 
 main {
   height: calc(100vh - 15vh);
@@ -116,6 +116,8 @@ footer {
 
 .internal-link {
   background-color: rgb(6, 104, 27);
+  text-decoration: none;
+  color: black;
 }
 
 @media only screen and (min-width:20em) {
@@ -126,9 +128,9 @@ footer {
   }
 
   /*IDs*/
-  #nav-menu-container {
+  /* #nav-menu-container {
     font-size: 1.2rem;
-  }
+  } */
 
 
 }

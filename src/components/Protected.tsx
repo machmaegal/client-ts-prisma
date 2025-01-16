@@ -9,7 +9,7 @@ const Protected = (props: { children: React.ReactNode }) => {
     if (isLoading) return <p>Loading ...</p>;
 
     if (!isLoggedIn) {
-        return <Navigate to="/login" />;
+        return <Navigate to="/" />;
     } else {
         return props.children;
     }
