@@ -57,7 +57,6 @@ const RecipeList = () => {
                 recipes.map((recipe, index) => (
                     <div key={index} className="recipe-card">
                         <h3>Recipe {index + 1}</h3>
-                        <p><strong>Total Calories:</strong> {recipe.totalCalories}kcal</p>
 
                         <h4>Ingredients:</h4>
                         <div>
@@ -69,6 +68,7 @@ const RecipeList = () => {
                                 </div>
                             ))}
                         </div>
+                        <p><strong>Total Calories:</strong> {recipe.totalCalories}kcal</p>
                         <button onClick={() => handleDeleteRecipe(recipe.id)}>Delete</button>
 
                     </div>
